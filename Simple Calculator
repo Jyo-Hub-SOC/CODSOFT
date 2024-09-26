@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double n1, n2;
+    char operation;
+
+    /*Input two numbers*/
+    cout << "Enter first number: ";
+    cin >> n1;
+    cout << "Enter second number: ";
+    cin >> n2;
+
+    /*Input the desired operation*/
+    cout << "Choose an operation (+, -, *, /): ";
+    cin >> operation;
+
+    /*Performing the operation based on User input*/
+    switch(operation) {
+        case '+':
+            cout << "Result: " << n1 + n2 <<endl;
+            break;
+        case '-':
+            cout << "Result: " << n1 - n2 <<endl;
+            break;
+        case '*':
+            cout << "Result: " << n1 * n2 <<endl;
+            break;
+        case '/':
+            if (n2 != 0) {
+                cout << "Result: " << n1 / n2 <<endl;
+            }
+            else {
+                cout << "Error: Division by zero is undefined!" << endl;
+            }
+            break;
+        default:
+            cout << "Error: Invalid operation!" <<endl;
+    }
+    return 0;
+}
